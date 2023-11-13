@@ -69,17 +69,21 @@ The 125-acre Alabama property from earlier would cost ```$62.50``` to rent for o
 
 
 
-# Step 3 - Calc Lease Prices between 1 and 365 days
+# Step 3 - Calculate Final Price
 
 Next, we need to calculate how much a property should cost for all of the lease durations between 1 and 365 days. Before we do that, remember that most State's hunting seasons are between 90-150 days. Therefore, if a State's hunting season is 120 days, then the price of a 120-day lease needs to be about the same as the `annual_acre_price`, since 120 days is essentially a full "year" of hunting.
 
-To achieve that, I will use a function where `lease_price` increases steeply at lower `lease_durations` and gradually stabilizes around day 90-150 (depending on the State). We can use an exponential decay function that has undergone a horizontal reflection with respect to the x-axis. Basically a "flipped" exponential decay curve 
+To achieve that, I will use a function where `lease_price` increases steeply at lower `lease_durations` and gradually stabilizes around day 90-150 (depending on the State). We can use an exponential decay function with a horizontal reflection over the x-axis. Basically a "flipped" exponential decay curve 
+
+# Step 3.1 Final Price Formula
 
 To calculate the final price, I will use the following formula:
 
 `final_price = first_day_price + additional_days_price `
 
-We already have the `first_day_price`, but to calculate the `additional_days_price`, we will iterate backwards from day 365 by 1 for each day in`lease_duration` + 1. We will multiply each day by the `annual_acre_price` and a State-specific `decay_rate`. The difference between each day's final value is summed and added to the `additional_days_price` variable, which is the final variable needed to calculate `final_price`. 
+# Step 3.2 Calc additional_days_price
+
+We already have the `first_day_price`, but to calculate the `additional_days_price`, we will iterate backwards from day 365 by 1 for each day in`lease_duration` + 1. We will multiply each day by the `annual_acre_price` and a State-specific `decay_rate`. The difference between each day's final value is summed and added to the `additional_days_price` variable. 
 
 
   # Calculate Additional days price
@@ -95,17 +99,15 @@ We already have the `first_day_price`, but to calculate the `additional_days_pri
         self.final_price = self.first_day_price + self.additional_days_price
 ```
 
+# Step 3.3 - Setting Custom Decay Rates
 
-
-
-
-
-
-
-   ### Step 4 - Setting Decay Rates
-
-I mentioned earlier that each State's hunting season length can vary, so we will want to ensure that a State's `final_price` is 90% of the `annual_acre_price ` when the `lease duration` is equal to the length of the hunting season. For example, the hunting season in Alabama is 120 days, so if someone rents a property in Alabama for 120 days, they should pay 90% of that property's `annual_acre_price`. To achieve this, we will use a decay rate of `-0.017`. Each state will have a different decay rate to achieve this 90% target. To see an example of this, let's compare the cost of a 100-acre property in Maryland to a 100-acre property in Florida (shown below). 
-
+I mentioned earlier that each State's hunting season length can vary, so we will want to ensure that a State's `final_price` is 90% of the `annual_acre_price ` when the `lease duration` is equal to the length of the hunting season. For example, the hunting season in Alabama is 120 days, so if someone rents a property in Alabama for 120 days, they should pay 90% of the 'full-year' price or `annual_acre_price`. To achieve this, for Alabama we will use a decay rate of `-0.017`, but each state will have a unique decay rate to achieve this 90% target. To better conceptualize this, let's compare the cost of a 100-acre property in Maryland to a 100-acre property in Florida (shown below). 
 
 
 ![Image Alt Text](https://raw.githubusercontent.com/PhilipHarvey20/lease-price-recommender/master/Images/Cost_of_100_Acre_Lease_MD_vs_FL.1.png)
+
+Since Florida's hunting season is longer than Maryland's, it will take longer for the price to reach 90% of the annual price.
+
+# Step 4 - Conclusion and Next Steps
+
+The prices are looking great! The next step will be calculating lease prices for other activities such as fishing, metal detecting, etc. 
