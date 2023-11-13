@@ -10,7 +10,7 @@ A lease price calculator for landowners who lease their property for hunting, fi
 
 Although public land and waterways are free to use, the quality of hunting, fishing, and metal-detecting is often very poor due to overcrowding, restrictive regulations, and poor land management. Leasing private land for outdoor recreation is one solution to this. 
 
-In Central Florida, for example, there are 29 Wildlife Management Areas (WMA) within a 1-hour drive of Orlando, but a first-year hunter or new Florida resident will only be able to hunt 11/29 of them. Why? Because the other 18 WMAs require a quota permit (lottery system) where only hunters whose names are drawn from a lottery are allowed to hunt there. Other hobbies such as metal-detecting and farming are completely prohibited on WMAs.
+In Central Florida, for example, there are 29 Wildlife Management Areas (WMA) within a 1-hour drive of Orlando, but a first-year hunter or new Florida resident will only be able to hunt 11/29 of them. Why? Because the other 18 WMAs require a quota permit (lottery system) where only hunters whose names are drawn from a lottery are allowed to hunt there. Other hobbies such as metal-detecting and farming are completely prohibited on public land.
 
 #### 62% of public land near Orlando is off-limits to new hunters because of Florida's lottery system for quota permits
 
