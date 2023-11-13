@@ -75,13 +75,13 @@ Next, we need to calculate how much a property should cost for all of the lease 
 
 To achieve that, I will use a function where `lease_price` increases steeply at lower `lease_durations` and gradually stabilizes around day 90-150 (depending on the State). We can use an exponential decay function with a horizontal reflection over the x-axis. Basically a "flipped" exponential decay curve 
 
-# Step 3.1 Final Price Formula
+# Step 3.1 - Final Price Formula
 
 To calculate the final price, I will use the following formula:
 
 `final_price = first_day_price + additional_days_price `
 
-# Step 3.2 Calc additional_days_price
+# Step 3.2 - Calc additional_days_price
 
 We already have the `first_day_price`, but to calculate the `additional_days_price`, we will iterate backwards from day 365 by 1 for each day in`lease_duration` + 1. We will multiply each day by the `annual_acre_price` and a State-specific `decay_rate`. The difference between each day's final value is summed and added to the `additional_days_price` variable. 
 
