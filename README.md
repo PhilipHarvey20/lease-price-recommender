@@ -26,7 +26,6 @@ In Central Florida, for example, there are 29 Wildlife Management Areas (WMA) wi
 
 # Current State of Leasing Private Land
 Most websites for renting recreational land only provide the landowner a place to upload pictures of their property and the option to list a phone number. These sites do not help with pricing or creating lease contracts. Hunters, as a result, find inflexible listings offering  expensive annual leases. The goal of the Outdoor Property Lease Calculator is to help landowners calculate an appropriate lease price for any lease duration and property size to encourage landowners to offer more flexible contracts at multiple price points.
-## Lease Price Calculator
 
 # Step 1 - Calculating Annual Lease Price (Hunting)
 Initially, I would like to calculate lease prices only for hunting since  leasing private land for hunting is already common. Unfortunately, I was not able to find enough data on hunting lease prices to fit a model. Instead, I will start with a small infographic I found on deerpros.com showing the average price per acre of hunting land in each state. I will use these values in a variable called: ```base_state_price```. 
@@ -93,8 +92,8 @@ We already have the `first_day_price`, but to calculate the `additional_days_pri
             addl_day_price = abs(current_day_price_plus_day - current_day_price)
             self.additional_days_price += addl_day_price # Total price of all additional lease days after day 1
         # Calculate Final Price
-        self.final_price = self.first_day_price + self.additional_days_price``` 
-
+        self.final_price = self.first_day_price + self.additional_days_price
+```
 
 
 
