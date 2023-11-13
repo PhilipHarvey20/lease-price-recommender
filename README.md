@@ -2,11 +2,11 @@
 <img src="https://raw.githubusercontent.com/PhilipHarvey20/lease-price-recommender/master/Images/Open_Woods_Logo_OW.png" width="200">
 
 
-## Outdoor Property Lease Calculator - 
+# Outdoor Property Lease Calculator - 
 A lease price calculator for landowners who lease their property for hunting, fishing, hiking, camping, metal detecting, and more!
 
 
-## Why pay to rent land?
+# Why pay to rent land?
 
 Although public land and waterways are free to use, the quality of hunting, fishing, and metal-detecting is often very poor due to overcrowding, restrictive regulations, and poor land management. Leasing private land for outdoor recreation is one solution to this. 
 
@@ -24,16 +24,16 @@ In Central Florida, for example, there are 29 Wildlife Management Areas (WMA) wi
 
 
 
-## Current State of Leasing Private Land
+# Current State of Leasing Private Land
 Most websites for renting recreational land only provide the landowner a place to upload pictures of their property and the option to list a phone number. These sites do not help with pricing or creating lease contracts. Hunters, as a result, find inflexible listings offering  expensive annual leases. The goal of the Outdoor Property Lease Calculator is to help landowners calculate an appropriate lease price for any lease duration and property size to encourage landowners to offer more flexible contracts at multiple price points.
 ## Lease Price Calculator
 
-### Step 1 - Calculating Annual Lease Price (Hunting)
+# Step 1 - Calculating Annual Lease Price (Hunting)
 Initially, I would like to calculate lease prices only for hunting since  leasing private land for hunting is already common. Unfortunately, I was not able to find enough data on hunting lease prices to fit a model. Instead, I will start with a small infographic I found on deerpros.com showing the average price per acre of hunting land in each state. I will use these values in a variable called: ```base_state_price```. 
 
 ![Image Alt Text](https://raw.githubusercontent.com/PhilipHarvey20/lease-price-recommender/master/Images/Avg_Cost_Per_Acre_by_State.png) (source: https://deerpros.com/hunting-lease/hunting-lease-price-guide/)
 
-### Annual Price Formula
+# Annual Price Formula
 
 Now that we have a base acreage price per state. To calculate an annual lease price, I will use the following formula:
 
@@ -59,7 +59,7 @@ For example a 125-acre property in Alabama priced at $10/acre would cost ```$1,2
 
 
 
-### Step 2 - 1st Day Lease Price
+# Step 2 - 1st Day Lease Price
 Now that we know how much to charge for a 1-year lease, let's next calculate how much to charge for a 1-day lease. The price of a 1-day lease will simply be ```5%``` of the ```annual_price```. 
 
 ```first_day_price = annual_price * .05```
@@ -70,7 +70,7 @@ The 125-acre Alabama property from earlier would cost ```$62.50``` to rent for o
 
 
 
-### Step 3 - Calc Lease Prices between 1 and 365 days
+# Step 3 - Calc Lease Prices between 1 and 365 days
 
 Next, we need to calculate how much a property should cost for all of the lease durations between 1 and 365 days. Before we do that, remember that most State's hunting seasons are between 90-150 days. Therefore, if a State's hunting season is 120 days, then the price of a 120-day lease needs to be about the same as the `annual_acre_price`, since 120 days is essentially a full "year" of hunting.
 
