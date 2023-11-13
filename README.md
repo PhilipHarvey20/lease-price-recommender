@@ -38,7 +38,7 @@ Now that we have a base acreage price per state. To calculate an annual lease pr
 
 ```annual_price = base_state_price * acreage```
 
-For example a 125-acre property in Alabama priced at $10/acre would cost ```$1,250```:
+For example a 125-acre property in Alabama priced at $10/acre would cost ```$1,250``` a year:
 
 ```annual_price = base_state_price * acreage```
 
