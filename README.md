@@ -24,7 +24,7 @@ In Central Florida, for example, there are 29 Wildlife Management Areas (WMA) wi
 
 
 # Current State of Leasing Private Land
-Most websites for renting recreational land only provide the landowner a place to upload pictures of their property and the option to list a phone number. These sites do not help with pricing or creating lease contracts. Hunters, as a result, find inflexible listings offering  expensive annual leases. The goal of the Outdoor Property Lease Calculator is to help landowners calculate an appropriate lease price for any lease duration and property size to encourage landowners to offer more flexible contracts at multiple price points.
+Most websites for renting recreational land only provide the landowner a place to upload pictures of their property and the option to list a phone number. These sites do not help with pricing or creating lease contracts. Renters, as a result, find inflexible listings offering  expensive annual leases. The goal of the Outdoor Property Lease Calculator is to help landowners calculate an appropriate lease price for any lease duration and property size to encourage landowners to offer more flexible contracts at multiple price points.
 
 # Step 1 - Calculating Annual Lease Price (Hunting)
 Initially, I would like to calculate lease prices only for hunting since  leasing private land for hunting is already common. Unfortunately, I was not able to find enough data on hunting lease prices to fit a model. Instead, I will start with a small infographic I found on deerpros.com showing the average price per acre of hunting land in each state. I will use these values in a variable called: ```base_state_price```. 
