@@ -70,7 +70,7 @@ The 125-acre Alabama property from earlier would cost ```$62.50``` to rent for o
 
 # Step 3 - Calculate Final Price
 
-Next, we need to calculate how much a property should cost for all of the lease durations between 1 and 365 days. Before we do that, remember that most State's hunting seasons are between 90-150 days. Therefore, if a State's hunting season is 120 days, then the price of a 120-day lease needs to be about the same as the `annual_acre_price`, since 120 days is essentially a full "year" of hunting.
+Next, we need to calculate how much a property should cost for all of the lease durations between 1 and 365 days. Before we do that, remember that most State's hunting seasons are between 90-150 days. For example, in Alabama where the deer hunting season is 120 days, the price of a 120-day lease should cost about as much as the `annual_acre_price`, since 120 days in Alabama is essentially a full "year" of hunting.
 
 To achieve that, I will use a function where `lease_price` increases steeply at lower `lease_durations` and gradually stabilizes around day 90-150 (depending on the State). We can use an exponential decay function with a horizontal reflection over the x-axis. Basically a "flipped" exponential decay curve 
 
