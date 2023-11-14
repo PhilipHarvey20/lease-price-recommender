@@ -100,7 +100,7 @@ We already have the `first_day_price`, but to calculate the `additional_days_pri
 
 # Step 3.3 - Setting Custom Decay Rates
 
-I mentioned earlier that each State's hunting season length can vary, so we will want to ensure that a State's `final_price` is 90% of the `annual_acre_price ` when the `lease duration` is equal to the length of the hunting season. For example, the hunting season in Alabama is 120 days, so if someone rents a property in Alabama for 120 days, they should pay 90% of the 'full-year' price or `annual_acre_price`. To achieve this, for Alabama we will use a decay rate of `-0.017`, but each state will have a unique decay rate to achieve this 90% target. To better understand this, let's look at two plots: the cost of a 100-acre property in Maryland vs. a 100-acre property in Florida. 
+I mentioned earlier that each State's hunting season length can vary, so we will want to ensure that a State's `final_price` is 90% of the `annual_acre_price ` when the `lease duration` is equal to the length of the hunting season. For example, the hunting season in Alabama is 120 days, so if someone rents a property in Alabama for 120 days, they should pay 90% of the 'full-year' price or `annual_acre_price`. To achieve this, for Alabama we will use a decay rate of `-0.017`, but each state will have its own unique decay rate to achieve this 90% target. To better understand this, let's look at two plots: the cost of a 100-acre property in Maryland vs. a 100-acre property in Florida. 
 
 
 ![Image Alt Text](https://raw.githubusercontent.com/PhilipHarvey20/lease-price-recommender/master/Images/Cost_of_100_Acre_Lease_MD_vs_FL.1.png)
