@@ -105,7 +105,6 @@ I mentioned earlier that each State's hunting season length can vary, so we will
 
 ![Image Alt Text](https://raw.githubusercontent.com/PhilipHarvey20/lease-price-recommender/master/Images/Cost_of_100_Acre_Lease_MD_vs_FL.1.png)
 
-Since Florida's hunting season is longer than Maryland's, it will take longer for the price to reach 90% of the annual price.
 
 # Step 4 - Conclusion and Next Steps
 
