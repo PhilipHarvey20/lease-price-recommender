@@ -3,7 +3,7 @@
 
 
 # Outdoor Property Lease Calculator - 
-A lease price calculator for landowners who lease their property for hunting, fishing, hiking, camping, metal detecting, and more!
+A lease price calculator for landowners who lease their property to hunters, fishers, hikers, campers, metal detectors, and more.
 
 
 # Why pay to rent land?
